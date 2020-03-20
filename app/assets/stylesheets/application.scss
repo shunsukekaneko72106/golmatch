@@ -1,0 +1,55 @@
+@import "reset";
+@import "modules/messages";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "modules/user";
+
+
+.header {
+  height: 45px;
+  width: 100%;
+  border-bottom:5px solid #003300;
+  background-color: #007700;
+  color: #ffffff;
+  position: relative;/*←相対位置*/
+  font-family: "Gill Sans", sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  padding-left: 60px;
+  .user-name {
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 150px;
+    line-height: 40px;
+    float: right;
+    .contents__btn {
+      float: right;
+      padding-left: 30px;
+      color: #ffffff;
+  }
+  }
+}
+
+.footer {
+  background-color: #003300;
+  width: 100%;
+  height: 20px;
+  color: #ffffff;
+  position: absolute;/*←絶対位置*/
+  bottom: 0; /*下に固定*/
+  display: flex;
+   p {
+     padding-left: 100px;
+   }
+    .footer-list {
+      display: flex;
+      justify-content: flex-end;
+      padding-left: 900px;
+      .contents__btn {
+        float: right;
+        padding-left: 30px;
+        color: #ffffff;
+    }
+  }
+}
+
