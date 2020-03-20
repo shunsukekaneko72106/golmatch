@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.side-bar {
+  box-sizing: border-box;
+  background-color: #E6FFE9;
+  width: 300px;
+  height: calc(100vh - 50px);
+  float: left;
+  .group {
+    box-sizing: border-box;
+    padding: 20px 0 40px;
+    &__name {
+      color: #222222;
+      font-size: 20px;
+    }
+    &__message {
+      color: #222222;
+      font-size: 15px;
+      margin-top: 5px;
+      padding-left: 20px;
+    }
+  }
+}
+
+
+.messages {
+  background-color: #FAFAFA;
+  box-sizing: border-box;
+  height: calc(100vh - 100px - 50px);
+  // overflow: scroll;
+  width: calc(100% - 300px);
+  display: flex;
+  .message {
+    padding: 46px 40px 0;
+    .upper-message {
+      display: flex;
+      &__user-name {
+        color: #434a54;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      &__date {
+        color: #999;
+        font-size: 12px;
+        padding-left: 10px;
+      }
+    }
+    .lower-message {
+      margin-top: 10px;
+      &__content {
+        color: #434a54;
+        font-size: 14px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+  .right-bar {
+    box-sizing: border-box;
+    background-color: #8FBC8F;
+    width: 350px;
+    height:calc(100vh - 50px);
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    margin:0 0 0 auto;
+    padding: 30px 30px;
+  }
+}  
+
+.form {
+  background-color: #DDDDDD;
+  box-sizing: border-box;
+  height: 90px;
+  padding: 20px 50px 20px 40px;
+  width: calc(100% - 300px - 350px);
+  float: left;
+
+  &__message {
+    border: none;
+    float: left;
+    height: 50px;
+    width: calc(100% - 180px);
+  }
+  &__mask {
+    background-color: #ffff;
+    float: left;
+    height: 50px;
+    padding-right: 10px;
+    &__image {
+      font-size: 20px;
+      line-height: 50px;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+  &__submit {
+    background-color: #007700;
+    border: none;
+    color: #FAFAFA;
+    float: right;
+    font-size: 16px;
+    height: 50px;
+    margin-left: 15px;
+    padding: 0 30px;
+  }
+}
