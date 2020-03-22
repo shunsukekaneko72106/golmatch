@@ -1,0 +1,34 @@
+.image
+  .main-text
+    %h1 マッチング数 <span>No.1</span> 
+    %h2 ゴルMATCH
+    %h3 ラウンドレッスンを一緒に！
+    %h4 必ず上達するマッチングアプリ
+    .mobile
+      = image_tag "sample_qr.gif", size: "60x60", alt: "QR"
+      .sab-text
+        %h5 スマートフォンから
+        %h5 QRコードを読み込んでください
+        %h5 ログイン後ご利用いただけます
+        %h6 アプリダウンロードはこちら
+        = image_tag "ja_badge_web_generic.png", size: "190x50", alt: "google"
+  #account-page.account-page
+    .account-page__inner
+      .account-page__inner--left.account-page__header
+        %h2 ログイン
+        = render "devise/shared/links"
+      .account-page__inner--right.user-form
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          .field
+            .field-label
+              = f.label :email
+            .field-input
+              = f.email_field :email, autofocus: true
+            .field
+              .field-label
+                = f.label :password
+                %i (英数字8文字以上)
+              .field-input
+                = f.password_field :password, autocomplete: "off"
+            .actions
+              = f.submit "ログイン", class: 'btn'
