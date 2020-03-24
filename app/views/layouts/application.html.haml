@@ -7,12 +7,15 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
+    = render 'layouts/notifications'
     .header
       ゴルMATCH
       .user-name
-        兼子俊祐
-        = link_to "#", class: "contents__btn" do
-          %i.fas.fa-address-card
+        = current_user.name 
+        -# kaneko
+        .header-list
+          = link_to edit_user_path(current_user) do
+            %i.fas.fa-address-card
     = yield
     .footer
       %p Copyright © 2020 ゴルMATCH Inc. All Rights Reserved.

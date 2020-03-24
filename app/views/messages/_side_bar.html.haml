@@ -1,17 +1,12 @@
 .side-bar
-  .groups
+  .group-edit-btn
+    = link_to 'グループを編集', '/groups/new'
+  .side-bar__groups-list
+  - current_user.groups.each do |group|
     .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
-    .group
-      .group__name
-        グループ名
-      .group__message
-        新着メッセージ
+      = link_to '#' do
+        .group__name
+          = group.name
+        .group__message
+          メッセージはまだありません。
+          

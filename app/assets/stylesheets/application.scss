@@ -1,9 +1,11 @@
 @import "reset";
+@import "config/colors";
 @import "modules/messages";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "modules/user";
-
+@import "modules/flash";
+@import "modules/group";
 
 .header {
   height: 45px;
@@ -17,7 +19,6 @@
   font-weight: bold;
   padding-left: 60px;
   .user-name {
-    
     font-size: 20px;
     font-weight: bold;
     padding-right: 150px;
@@ -27,7 +28,11 @@
       float: right;
       padding-left: 30px;
       color: #ffffff;
-  }
+    }
+    .header-list {
+      float: right;
+      margin-left: 40px;
+    }
   }
 }
 
