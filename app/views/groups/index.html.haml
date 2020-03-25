@@ -1,3 +1,10 @@
 .wrapper
+  .header
+    ゴルMATCH
+    .user-name
+      = current_user.name
+      .header-list
+        = link_to edit_user_path(current_user) do
+          %i.fas.fa-address-card
   = render 'messages/side_bar'
   

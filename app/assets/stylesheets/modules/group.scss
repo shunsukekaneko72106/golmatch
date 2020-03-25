@@ -1,35 +1,60 @@
-h1 {
-  letter-spacing: 2px;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-}
-h2 {
-  margin-bottom: 10px;
-  color: #f05050;
-  font-size: 14px;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-li {
-  margin: 0;
-  padding: 0;
-  font-size: 13px;
-}
-
-
-
+.main-text {
+  padding-top: 200px;
+  padding-left: 80px;
+  float: left;
+  // align-items: center;
+  // flex-direction: column;
+  justify-content: flex-start;
+  h1 {
+    font-size: 30px;
+    color :#003300;
+    padding-left: 40px;
+  }
+  h2 {
+    font-size: 100px;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  span {
+    color: #007700;
+  }
+  h3 {
+    font-size: 20px;
+    color :#003300;
+  }
+  h4 {
+    font-size: 30px;
+    color :#003300;
+    font-weight: bold;
+  }
+  .mobile {
+    padding-top: 10px;
+    .sab-text {
+      float: left;
+      padding-top: 10px;
+      padding-right: 15px;
+      padding-left: 30px;
+      h5 {
+        font-size: 10px;
+        color: #ffffff;
+      }
+      h6 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 15px;
+        color :#003300;
+      }
+    }
+  }
+}  
 .chat-group-form {
-  width: 980px;
+  width: 700px;
   margin: 60px auto;
-  padding: 40px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  margin-bottom: 200px;
+  padding: 60px;
+  // background-color: #fff;
+  border: 1px solid #003300;
   border-radius: 5px;
   box-sizing: border-box;
   &__errors {
@@ -68,7 +93,7 @@ li {
     }
     &--left {
       float: left;
-      width: 30%;
+      // width: 30%;
       padding-right: 20px;
       padding-left: 20px;
       box-sizing: border-box;
@@ -104,4 +129,36 @@ li {
       color: #f05050;
     }
   }
+}
+
+h1 {
+  letter-spacing: 2px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 10px;
+  color: #f05050;
+  font-size: 14px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.image-groups {
+  display: flex;
+  height: 98vh;
+  background-position: center;
+  background-image: url(golf-2217600_1920.jpg);
+  background-size: cover;
 }
