@@ -1,3 +1,5 @@
+$main-font-famly: "Yu Gothic", 游ゴシック体, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
 .main-text {
   padding-top: 200px;
   padding-left: 80px;
@@ -81,7 +83,7 @@
     display: inline-block;
     padding: 12px 20px;
     color: #fff;
-    background-color: #38aef0;
+    background-color: #007700;
     border: 0;
   }
   &__field {
@@ -123,7 +125,7 @@
     display: inline-block;
     cursor: pointer;
     &--add {
-      color: #38aef0;
+      color: #007700;
     }
     &--remove {
       color: #f05050;
@@ -161,4 +163,114 @@ li {
   background-position: center;
   background-image: url(golf-2217600_1920.jpg);
   background-size: cover;
+}
+.header-list {
+  font-size: 20px;
+  line-height: 40px;
+  float: right;
+  color: #ffffff;
+  
+}
+
+.plan {
+  padding-top :30px;
+  padding-left: 50px;
+}
+
+.reservation-form {
+  height: 100px;
+  width: 800px;
+
+  background-color: #fff000;
+  font-family:$main-font-famly;
+  text-align: center;
+
+}
+
+.right-bar-plan {
+  box-sizing: border-box;
+  background-color: #8FBC8F;
+  width: 500px;
+  height: calc(100vh - 115px);
+  padding: 40px 40px ;
+  margin:0 0 0 auto;
+  font-family:$main-font-famly;
+  .teacher-plf {
+    margin-left: 50px;
+    h1 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+  .place-tag {
+    margin-left: 50px;
+  }
+}
+table{
+  margin-top: 40px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table tr{
+  border-bottom: solid 2px white;
+}
+
+table tr:last-child{
+  border-bottom: none;
+}
+
+table th{
+  position: relative;
+  text-align: left;
+  width: 30%;
+  background-color: #52c2d0;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+table th:after{
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top:calc(50% - 10px);
+  right:-10px;
+  border-left: 10px solid #52c2d0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+table td{
+  text-align: left;
+  width: 70%;
+  text-align: center;
+  background-color: #eee;
+  padding: 10px 0;
+}
+
+.sam13 a { 
+  display:block;
+  width: 800px; /* 横幅 */
+  background-color:#f70057;;
+  border:2px solid #00171F;
+  padding:10px; /* a要素内の余白 */
+  height: 80px;
+  font-family:$main-font-famly;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  p {
+    font-size: 15px;
+  }
+
+  }
+  
+   /* 以下マウスを載せたときのスタイル */
+.sam13 a:hover { 
+  background-color: #52c2d0;;
+  color:#222222; 
 }
