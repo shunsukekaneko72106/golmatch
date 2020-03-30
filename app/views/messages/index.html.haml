@@ -12,7 +12,11 @@
     .group-edit-btn
       = link_to 'グループを編集', '/groups/new', class: "edit" 
   .group-text
-    = current_user.name + "さんのマイチャット"
+    = @group.name
+    .chat-main__group-info-member このチャットのメンバー
+    - @group.users.each do |user|
+      .chat-main__group-info-member
+        = user.name  
   
 .wrapper
   = render "side_bar"
