@@ -342,27 +342,27 @@
       text-align: center;
       padding-top: 70px;
       position: relative;
-       h7 {
-         font-size: 50px;
-         color :#003300;
-         font-weight: bold;
-         position: relative;
-       }  
-       .safe-copy__text-page
-         h8 {
-           font-size: 50px;
-           color :#CEF9DC;
-           font-weight: bold;
-           flex-direction: column;
-           position: absolute; 
-           z-index: 2;
-           line-height:20%;
-           letter-spacing: 2px;
-           margin-bottom: 30px;
-         }
-         p {
-           padding-top: 40px;
-         }
+        h7 {
+          font-size: 50px;
+          color :#003300;
+          font-weight: bold;
+          position: relative;
+        }  
+        .safe-copy__text-page
+          h8 {
+            font-size: 50px;
+            color :#CEF9DC;
+            font-weight: bold;
+            flex-direction: column;
+            position: absolute; 
+            z-index: 2;
+            line-height:20%;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+          }
+          p {
+            padding-top: 40px;
+          }
   }
   .safe-card-top {
     margin-top: 50px;
