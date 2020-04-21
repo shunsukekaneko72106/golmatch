@@ -1,3 +1,4 @@
+
 .image {
   display: flex;
   height: 680px;
@@ -191,10 +192,11 @@
 .body-top {
   height: 165vh;
   width: 100%;
+  
   .boby-top__text{
-     text-align: center;
-     padding-top: 20px;
-     position: relative;
+      text-align: center;
+      padding-top: 20px;
+      position: relative;
       h7 {
         font-size: 55px;
         color :#003300;
@@ -231,13 +233,18 @@
         color :#003300;
         font-weight: bold;
         text-align: center;
-       }
+        }
     }
   }  
   .card-section {
-     display: flex;
-     justify-content: center;
-     height: 400px;
+      display: flex;
+      justify-content: center;
+      height: 400px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(40px);
+      transition: all 1s;
+
     img {
       border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
       width:  150px;       /* ※縦横を同値に */
@@ -285,6 +292,10 @@
   .copy-text {
     margin: 100px 150px;
     text-align: center;
+    // opacity: 0;
+    // visibility: hidden;
+    // transform: translateY(40px);
+    // transition: all 1s;
     h11 {
       font-size: 35px;
       font-weight: bold;
@@ -409,24 +420,24 @@
     text-align: center;
     padding-top: 70px;
     position: relative;
-     h7 {
-       font-size: 50px;
-       color :#003300;
-       font-weight: bold;
-       position: relative;
-     }  
-     .reason-section__copy
-       h8 {
-         font-size: 50px;
-         color :#CEF9DC;
-         font-weight: bold;
-         flex-direction: column;
-         position: absolute; 
-         z-index: 2;
-         line-height:20%;
-         letter-spacing: 2px;
-         margin-bottom: 30px;
-       }
+      h7 {
+        font-size: 50px;
+        color :#003300;
+        font-weight: bold;
+        position: relative;
+      }  
+      .reason-section__copy
+        h8 {
+          font-size: 50px;
+          color :#CEF9DC;
+          font-weight: bold;
+          flex-direction: column;
+          position: absolute; 
+          z-index: 2;
+          line-height:20%;
+          letter-spacing: 2px;
+          margin-bottom: 30px;
+        }
   }
   .reason-cards {
     text-align: center;
@@ -757,4 +768,15 @@
       }
     }
   }
+}
+
+.card-section.is-show{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
+.copy-text.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
 }
