@@ -1,22 +1,20 @@
 
 .image-top {
   display: flex;
-  height: 750px;
+  height: 800px;
   background-position: center;
   background-image: url(golf-2217600_1920.jpg);
   background-size: cover;
-  // flex-direction: column;
   .main-text {
-    padding-top: 200px;
-    padding-left: 80px;
+    // padding-top: 200px;
+    // padding-left: 80px;
     float: left;
-    // align-items: center;
-    // flex-direction: column;
     justify-content: flex-start;
     h1 {
       font-size: 30px;
       color :#003300;
       padding-left: 40px;
+      font-weight: bold;
     }
     h2 {
       font-size: 100px;
@@ -26,6 +24,7 @@
     }
     span {
       color: #007700;
+      font-size: 50px;
     }
     h3 {
       font-size: 20px;
@@ -58,18 +57,19 @@
   }  
   .account-page {
     float: right;
+    color: #ffffff;
+    font-weight: bold;
     .account-page__inner {
       float: right;
       width: 600px;
       margin-top: 60px ;
       margin-left: 300px;
       padding: 60px;
-      // background-color: #fff;
       border: 1px solid #003300;
-      // border-radius: 5px;
       .account-page__inner--left, .account-page__inner--right {
         float: left;
         width: 50%;
+        padding-bottom: 50px;
       }
       &:after {
         clear: both;
@@ -82,7 +82,8 @@
         margin-bottom: 10px;
         letter-spacing: 2px;
         font-size: 40px;
-        font-weight: 200;
+        font-weight: bold;
+
         &:after {
           content: '';
           display: block;
@@ -101,6 +102,8 @@
         color: #fff;
         background-color: #003300;
         font-size: 14px;
+        text-decoration: none;
+        padding-bottom: 20px;
       }
     }
   
@@ -162,6 +165,22 @@
         }
       }
     }
+    .coach{
+      margin-top: 20px;
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+      display: block;  
+      width: 300px;
+      height: 60px;
+      text-align: center;
+      padding-top: 12px;
+      border-radius: 50px;
+      border: 1px solid #003300;
+      text-decoration: none;
+      color: #003300;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -189,7 +208,6 @@
 }
 
 .body-top {
-    // height: 850vh;
   width: 100%;
   background: url('b-ground.gif');
   background-size: cover;
@@ -209,13 +227,10 @@
           color :#003300;
           font-weight: bold;
           position: relative;
-          
-          // display: flex;
         }  
         .body-top__text-page {
           
             h8 {
-              // float: left;
               font-size: 55px;
               color :#CEF9DC;
               font-weight: bold;
@@ -225,7 +240,6 @@
               line-height:20%;
               letter-spacing: 2px;
               margin-bottom: 30px;
-              
             }
         }
     }
@@ -260,8 +274,6 @@
           height: 150px;       /* ※縦横を同値に */
           margin: 20px 70px;
           }
-        // display: flex;
-        // justify-content: center;
         .card-item-reft {
           width: 320px;
           border: 1px solid #003300;
@@ -900,8 +912,6 @@
   width: 100%;
   height: 20px;
   color: #ffffff;
-  // position: absolute;/*←絶対位置*/
-  // bottom: 0; /*下に固定*/
   display: flex;
     p {
       padding-left: 100px;

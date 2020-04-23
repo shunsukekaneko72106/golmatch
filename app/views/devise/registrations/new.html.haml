@@ -33,7 +33,7 @@
           .field
             .field-label
               = f.label :password
-              %i (英数字8文字以上)
+              %p (英数字8文字以上)
             .field-input
               = f.password_field :password, autocomplete: "off"
           .field
@@ -43,6 +43,9 @@
               = f.password_field :password_confirmation, autocomplete: "off"
           .actions
             = f.submit "新規作成", class: 'btn'
+      .coach
+        %h16
+          レッスンプロご希望の方はこちら
 .body-top
   .main-content
     .boby-top__text
