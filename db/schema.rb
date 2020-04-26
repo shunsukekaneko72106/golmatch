@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200325064326) do
+ActiveRecord::Schema.define(version: 20200423041657) do
+
+  create_table "coaches", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name",                     null: false
+    t.text     "profile",    limit: 65535, null: false
+    t.text     "career",     limit: 65535, null: false
+    t.string   "image",                    null: false
+    t.integer  "birthday",                 null: false
+    t.integer  "course",                   null: false
+    t.text     "comment",    limit: 65535, null: false
+    t.string   "specialty",                null: false
+    t.string   "holiday",                  null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "group_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "group_id"

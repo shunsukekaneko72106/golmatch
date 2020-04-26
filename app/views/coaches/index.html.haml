@@ -1,0 +1,32 @@
+.header
+  ゴルMATCH
+  .user-name
+    = current_user.name + "さん"
+    .header-list
+      = link_to edit_user_path(current_user) do
+        %h1 アカウント&リスト◁
+.group-header
+  .home-btn
+    = link_to root_path do
+      %i.fas.fa-home
+    .group-edit-btn
+      %h 参加中のグループ一覧
+  .group-text
+    %h レッスンプロ在籍一覧
+.wrapper-coach
+  = render "side_bar_coach"
+  = render "main_chat_coach"
+  = render "right_bar_coach"
+
+.main-all
+  .main-body
+    .container
+      .container-inner
+        .container-main
+          .main-content-top
+            .search-head
+            .search-sec
+            .search-softview
+            .result_list
+        .container-left
+
