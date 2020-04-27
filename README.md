@@ -22,3 +22,15 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+コーチのデータベース
+"名前"             name
+"年"               birthday
+"プロフィール(経歴)" profile
+"実績"             career
+"写真"             image
+"対応ゴルフ場"      course
+"コメント"         comment
+"特技"            specialty
+"定休日"           holiday 

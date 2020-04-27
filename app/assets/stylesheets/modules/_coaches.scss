@@ -192,34 +192,62 @@
     height: calc(100vh - 115px);
     padding: 40px 40px;
     overflow: auto;
-    .pro-apalel {
-      margin-top: 15px;
-      margin-bottom: 40px;
-      .pro-img {
-        float: left;
-        padding-right: 20px;
-      }
-      .pro-text {
-        .strong {
-          font-size: 20px;
-          font-weight: bold;
-          line-height: 1.5;
-          display: inline;
-          background: linear-gradient(transparent 65%, #fff100 20%);
-          letter-spacing: .5px;
+    .pro-profile {
+      margin-bottom: 30px;
+        .pro-text-top { 
+          background: #003300;
+          color: #ffffff;
+          .pro-text-top-on{
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 18px;
+            width: 100%;
+            padding: 14px 20px 13px;
+          }
         }
-        .point {
-          font-size: 15px;
-          padding-top: 20px;
-        }
-      }
-    } 
+        .pro-apalel {
+          margin-top: 15px;
+          margin-bottom: 20px;
+          .pro-img {
+            float: left;
+            padding-right: 20px;
+          }
+          .pro-text {
+            position: relative;
+            .strong {
+              font-weight: bold;
+              line-height: 1.5;
+              text-align: center;
+              // display: inline;
+              // background: linear-gradient(transparent 65%, #fff100 20%);
+              letter-spacing: 0.5px;
+              width  : 230px;
+              margin :  20px;
+              padding:  20px;
+              border-radius: 20px;
+              background-color: #F5F5F5;
+              margin:0 0 0 auto
+            }
+            .box-wrapper__tongari {
+              
+            }
+            .point-name {
+              color: #003300;
+              font-weight: bold;
+              font-size: 15px;
+              padding-top: 20px;
+              padding-bottom: 20px;
+              
+            }
+          }
+        } 
+    }
     .pro-profile-top {
       margin-bottom: 30px;
       .pro-profile-top-on {
         background: #003300;
         color: #ffffff;
-        padding: 14px 20px 13px;
+        padding-left: 20px;
         .pro-top {
           font-weight: bold;
           margin-bottom: 35px;
@@ -231,6 +259,27 @@
       }
       p {
         font-size: 15px;
+        border-bottom: 1px solid #ebe5de;
+      }
+    }
+    .pro-profile-1st {
+      margin-bottom: 30px;
+      .pro-profile-top-on1st {
+        background: #003300;
+        color: #ffffff;
+        padding-left: 20px;
+        .pro-top {
+          font-weight: bold;
+          margin-bottom: 35px;
+          font-size: 18px;
+        }
+      }
+      .p-top {
+        padding-top: 20px;
+      }
+      p {
+        font-size: 15px;
+        border-bottom: 1px solid #ebe5de;
       }
     }
     .pro-profile-2nd {
@@ -238,7 +287,7 @@
       .pro-profile-top-on2 {
         background: #003300;
         color: #ffffff;
-        padding: 14px 20px 13px;
+        padding-left: 20px;
         .pro-top {
           font-weight: bold;
           margin-bottom: 35px;
@@ -250,6 +299,7 @@
       }
       p {
         font-size: 15px;
+        border-bottom: 1px solid #ebe5de;
       }
     }
     .pro-profile-3rd {
@@ -257,7 +307,7 @@
       .pro-profile-top-on3 {
         background: #003300;
         color: #ffffff;
-        padding: 14px 20px 13px;
+        padding-left: 20px;
         .pro-top {
           font-weight: bold;
           margin-bottom: 35px;
@@ -269,6 +319,47 @@
       }
       p {
         font-size: 15px;
+        border-bottom: 1px solid #ebe5de;
+      }
+    }
+    .pro-profile-4th {
+      margin-bottom: 30px;
+      .pro-profile-top-on4 {
+        background: #003300;
+        color: #ffffff;
+        padding-left: 20px;
+        .pro-top {
+          font-weight: bold;
+          margin-bottom: 35px;
+          font-size: 18px;
+        }
+      }
+      .p-top {
+        padding-top: 20px;
+      }
+      p {
+        font-size: 15px;
+        border-bottom: 1px solid #ebe5de;
+      }
+    }
+    .pro-profile-5th {
+      margin-bottom: 30px;
+      .pro-profile-top-on5 {
+        background: #003300;
+        color: #ffffff;
+        padding-left: 20px;
+        .pro-top {
+          font-weight: bold;
+          margin-bottom: 35px;
+          font-size: 18px;
+        }
+      }
+      .p-top {
+        padding-top: 20px;
+      }
+      p {
+        font-size: 15px;
+        border-bottom: 1px solid #ebe5de;
       }
     }
 }
