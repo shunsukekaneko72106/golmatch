@@ -17,9 +17,20 @@
     - @group.users.each do |user|
       .chat-main__group-info-member
         = user.name  
-  
 .wrapper
   = render "side_bar"
   = render "main_chat"
   = render "right_bar"
 
+.footer
+  %p Copyright © 2020 ゴルMATCH Inc. All Rights Reserved.
+  .footer-list
+    follow us!
+    = link_to "https://www.facebook.com/", class: "contents__btn" do
+      = icon('fab', 'facebook-square')
+    = link_to "https://twitter.com/", class: "contents__btn" do
+      = icon('fab', 'twitter')
+    = link_to "https://www.instagram.com/", class: "contents__btn" do
+      = icon('fab', 'instagram')
+    = link_to "https://www.instagram.com/", class: "contents__btn" do
+      = icon('fab', 'youtube')

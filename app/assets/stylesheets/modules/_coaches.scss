@@ -68,7 +68,7 @@
     .coach-user{
       background-color: #ffffff;
       padding: 20px 20px;
-      height: 410px;
+      height: 370px;
       margin-bottom: 20px;
       .recommend{
         font-size: 12px;
@@ -132,11 +132,24 @@
             padding-bottom: 5px;
           }
           .adress {
+            background: #ffffff;
+            border: 1px solid #00a800;
+            display: inline-block;
+            margin-right: 5px;
+            padding: 3px 5px;
+            border-radius: 3px;
             font-size: 12px;
-            line-height: 20px;
+            line-height: 22px;
             color: #555555;
+            padding-bottom: 5px;
           }
           .acsess {
+            background: #ffffff;
+            border: 1px solid #00a800;
+            display: inline-block;
+            margin-right: 5px;
+            padding: 3px 5px;
+            border-radius: 3px;
             font-size: 12px;
             line-height: 22px;
             color: #555555;
@@ -359,7 +372,7 @@
       }
       p {
         font-size: 15px;
-        border-bottom: 1px solid #ebe5de;
+        // border-bottom: 1px solid #ebe5de;
       }
     }
 }
