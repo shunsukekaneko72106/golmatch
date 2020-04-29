@@ -16,7 +16,7 @@
     .chat-main__group-info-member このチャットのメンバー
     - @group.users.each do |user|
       .chat-main__group-info-member
-        = user.name  
+        = user.name + "さん"
 .wrapper
   = render "side_bar"
   = render "main_chat"
