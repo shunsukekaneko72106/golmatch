@@ -1,0 +1,308 @@
+$main-font-famly: "Yu Gothic", 游ゴシック体, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+.main-text {
+  padding-top: 200px;
+  padding-left: 80px;
+  float: left;
+  // align-items: center;
+  // flex-direction: column;
+  justify-content: flex-start;
+  h1 {
+    font-size: 30px;
+    color :#003300;
+    padding-left: 40px;
+  }
+  h2 {
+    font-size: 100px;
+    font-family: "Gill Sans", sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  span {
+    color: #007700;
+  }
+  h3 {
+    font-size: 20px;
+    color :#007700;
+  }
+  h4 {
+    font-size: 30px;
+    color :#007700;
+    font-weight: bold;
+  }
+  .mobile {
+    padding-top: 10px;
+    .sab-text {
+      float: left;
+      padding-top: 10px;
+      padding-right: 15px;
+      padding-left: 30px;
+      h5 {
+        font-size: 10px;
+        color: #ffffff;
+      }
+      h6 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 15px;
+        color :#003300;
+      }
+    }
+  }
+}  
+.chat-group-form {
+  width: 700px;
+  height: 700px;
+  margin: 60px auto;
+  margin-bottom: 200px;
+  padding: 60px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid #003300;
+  border-radius: 5px;
+  box-sizing: border-box;
+  position: relative;
+  &__errors {
+    margin: 30px 0;
+    padding: 20px 40px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    text-align: center;
+  }
+  &__label {
+    display: block;
+    line-height: 50px;
+    font-weight: bold;
+    text-align: right;
+  }
+  &__input {
+    float: left;
+    width: 100%;
+    line-height: 30px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+  }
+  &__action-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #fff;
+    background-color: #007700;
+    border: 0;
+    position: absolute;
+    bottom: 20px;
+    margin-left:300px;
+    
+  }
+  &__field {
+    margin-top: 30px;
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    &--left {
+      float: left;
+      // width: 30%;
+      padding-right: 20px;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
+    &--right {
+      float: right;
+      width: 70%;
+    }
+  }
+}
+
+.chat-group-user {
+  padding: 0 15px;
+  line-height: 50px;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+  &__name {
+    float: left;
+  }
+  &__btn {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    &--add {
+      color: #007700;
+    }
+    &--remove {
+      color: #f05050;
+    }
+  }
+}
+
+h1 {
+  // letter-spacing: 2px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+h2 {
+  margin-bottom: 10px;
+  color: #f05050;
+  font-size: 14px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.image-groups {
+  display: flex;
+  height: 98vh;
+  background-position: center;
+  background-image: url(golf-2217600_1920.jpg);
+  background-size: cover;
+}
+.header-list {
+  font-size: 20px;
+  line-height: 40px;
+  float: right;
+  color: #ffffff;
+  
+}
+
+.plan {
+  padding-top :30px;
+  padding-left: 50px;
+}
+
+.reservation-form {
+  height: 100px;
+  width: 800px;
+
+  background-color: #fff000;
+  font-family:$main-font-famly;
+  text-align: center;
+
+}
+
+.right-bar-plan {
+  box-sizing: border-box;
+  background-color: #8FBC8F;
+  width: 500px;
+  height: calc(100vh - 115px);
+  padding: 40px 40px ;
+  margin:0 0 0 auto;
+  font-family:$main-font-famly;
+  text-align: center;
+  h20 {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Gill Sans", sans-serif;
+
+  }
+  .teacher-plf {
+    margin-left: 50px;
+
+  }
+  .place-tag {
+    margin-left: 50px;
+  }
+}
+table{
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 40px;
+}
+
+table tr{
+  border-bottom: solid 2px white;
+}
+
+table tr:last-child{
+  border-bottom: none;
+}
+
+table th{
+  position: relative;
+  text-align: left;
+  width: 30%;
+  background-color: #52c2d0;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+table th:after{
+  display: block;
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top:calc(50% - 10px);
+  right:-10px;
+  border-left: 10px solid #52c2d0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+table td{
+  text-align: left;
+  width: 70%;
+  text-align: center;
+  background-color: #eee;
+  padding: 10px 0;
+}
+
+.sam13 a { 
+  display:block;
+  width: 800px; /* 横幅 */
+  background-color:#f70057;;
+  border:2px solid #00171F;
+  padding:10px; /* a要素内の余白 */
+  height: 80px;
+  font-family:$main-font-famly;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  color: #ffffff;
+  p {
+    font-size: 15px;
+  }
+
+  }
+  
+   /* 以下マウスを載せたときのスタイル */
+.sam13 a:hover { 
+  background-color: #52c2d0;;
+  color:#222222; 
+}
+
+.chat-main__group-info-member {
+  float: right;
+  color: black;
+  height: 20px;
+  padding-right: 30px;
+}
+
+.grouphome-btn {
+  padding-top: 20px;
+  .home-btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px 20px;
+    color: #fff;
+    background-color: #003300;
+    border: 0;
+    position: absolute;
+    bottom: 20px;
+  }
+}

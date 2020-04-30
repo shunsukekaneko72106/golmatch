@@ -4,25 +4,13 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %title Golmatch
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    -# = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    -# = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
   %body
-    .header
-      ゴルMATCH
-      .user-name
-        兼子俊祐
-        = link_to "#", class: "contents__btn" do
-          %i.fas.fa-address-card
+    = render 'layouts/notifications'
     = yield
-    .footer
-      %p Copyright © 2020 ゴルMATCH Inc. All Rights Reserved.
-      .footer-list
-        follow us!
-        = link_to "https://www.facebook.com/", class: "contents__btn" do
-          = icon('fab', 'facebook-square')
-        = link_to "https://twitter.com/", class: "contents__btn" do
-          = icon('fab', 'twitter')
-        = link_to "https://www.instagram.com/", class: "contents__btn" do
-          = icon('fab', 'instagram')
-        = link_to "https://www.instagram.com/", class: "contents__btn" do
-          = icon('fab', 'youtube')
+    
+

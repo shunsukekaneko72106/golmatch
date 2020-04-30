@@ -1,0 +1,216 @@
+.image-top
+  .main-text
+    %h1 マッチング数 <span>No.1</span> 
+    %h2 ゴルMATCH
+    %h3 ラウンドレッスンを一緒に!！
+    %h4 必ず上達するマッチングアプリ
+    .mobile
+      = image_tag "sample_qr.gif", size: "60x60", alt: "QR"
+      .sab-text
+        %h5 スマートフォンから
+        %h5 QRコードを読み込んでください
+        %h5 ログイン後ご利用いただけます
+        %h6 アプリダウンロードはこちら
+        = image_tag "ja_badge_web_generic.png", size: "190x50", alt: "google"
+  #account-page.account-page
+    .account-page__inner.clearfix
+      .account-page__inner--left.account-page__header
+        %h2 新規作成
+        = render "devise/shared/links"
+      .account-page__inner--right.user-form
+        = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+          = devise_error_messages!
+          .field
+            .field-label
+              = f.label :name
+            .field-input
+              = f.text_field :name, autofocus: true
+          .field
+            .field-label
+              = f.label :email
+            .field-input
+              = f.email_field :email
+          .field
+            .field-label
+              = f.label :password
+              %p (英数字8文字以上)
+            .field-input
+              = f.password_field :password, autocomplete: "off"
+          .field
+            .field-label
+              = f.label :password_confirmation
+            .field-input
+              = f.password_field :password_confirmation, autocomplete: "off"
+          .actions
+            = f.submit "新規作成", class: 'btn'
+      .coach
+        %h16
+          レッスンプロご希望の方はこちら
+.body-top
+  .main-content
+    .boby-top__text
+      %h7 いつものプレーが特別に
+      .body-top__text-page
+        %h8 So Special
+    .body-img
+      = image_tag "body-top_sample_s.jpg", size: "640 × 427", alt: "QR"
+      .body-top__text-header
+        %h9 実際のご利用者の声
+    .card-section
+      .card-item-reft
+        = image_tag "card-sample2_s.jpg", size: "213x142", alt: "card-2"
+        %p10 光本さん 39歳 東京都
+        %p 盛り上げ上手な方はスタンダードクラスに、自分のお気に入りはVIPクラスにいますよ。評価が高いだけありました。
+      .card-item-right
+        = image_tag "card-sample1_V4.jpg", size: "213x142", alt: "card-1"
+        %p10 佐藤さん 34歳 大阪府
+        %p あった時間の長さに応じて請求されるから、安心して使ってますよ。運営も丁寧に対応してくれるので安心です。
+    .copy-text
+      %h11 10万DL突破！ おかげさまで１周年
+      %p 2020年3月に日本で初のゴルフマッチングアプリとしてリリース以降、紹介によるご登録者が半数以上。皆様に高品質をご好評いただき、安心してご利用いただいています。
+    .body-copy
+      .body-card
+        %ul
+          %li 
+          = image_tag "body-card1.jpg", size: "213x142", alt: "card-1"
+          %li
+          = image_tag "bod-ycard4.jpg", size: "213x142", alt: "card-2"
+          %li
+          = image_tag "body-card2.jpg", size: "213x142", alt: "card-3"
+          %li
+          = image_tag "body-card3.jpg", size: "213x142", alt: "card-4"
+      .body-card-text
+        %h12 近日大幅アップデート!
+        %h13 期間限定のゴルフレッスンキャンペーン情報や各ゴルフ場からのお知らせなどはこちらで随時、追加掲載いたします。
+    .safe-copy
+      .safe-copy__text
+        %h7 ゴルMATCHが安心安全の理由
+        .safe-copy__text-page
+          %h8 safety protocol
+          .safe-copy__text-pages
+            %p お客様に安心・安全にご利用いただくために様々な対策をしています。
+      .safe-card-top
+        %ul
+          %li#nick
+            = image_tag "safe-card1.jpg", size: "213x142", alt: "card-1"
+            %p ニックネーム登録で実名はでません
+          %li#face
+            = image_tag "safe-card2.png", size: "213x142", alt: "card-2"
+            %p facebookには一切投稿されません
+          %li#everyday
+            = image_tag "safe-card3.png", size: "213x142", alt: "card-1"
+            %p 24時間365日の監視万全なサポート体制
+    .reason-section
+      .reason-section__text
+        %h7 選ばれる理由
+        .reason-section__copy
+          %h8 The reason
+      .reason-cards
+        .reason-cards-top
+          %h14 point 1
+          .reason-cards-top__sectiontop
+            %h15 初心者プログラムも充実
+            .reason-cards-top__sectiontop__img
+              = image_tag "reson-card1.jpg", size: "213x142", alt: "card-1"
+              %p ゴルフを始めたい方、女性の方でも安心です
+        .reason-cards-2nd
+          %h14 point 2
+          .reason-cards-top__section2nd
+            %h15 仕事でもプライベートでもご利用いただけます
+            .reason-cards-top__section2nd__img
+              = image_tag "reson-card2.jpg", size: "213x142", alt: "card-1"
+              %p 大事な接待やお仕事でもあなたをアシストします
+        .reason-cards-3rd
+          %h14 point 3
+          .reason-cards-top__section3rd
+            %h15 ゴルフを愛する皆様の技術向上に取り組みます
+            .reason-cards-top__section3rd__img
+              = image_tag "reson-card3.jpg", size: "213x142", alt: "card-1"
+              %p ツアープロの経験を生かしたレッスンで、親切丁寧な指導を行います。
+        .reason-cards-3rd
+          %h14 point 4
+          .reason-cards-top__section4th
+            %h15 領収書も発行いたします。
+            .reason-cards-top__section4th__img
+              = image_tag "1793499.jpg", size: "213x142", alt: "card-1"
+              %p 領収書はスマホから簡単にいつでも発行できます
+    .support-section
+      %h11 ゴルMATCHは様々なメディアにも紹介されています
+      .support-card
+        = image_tag "logo-engineer-text-7c65cde11c2832e6d1fcec26aebcf33f.svg", size: "300x150", alt: "card-1"
+    .image-under
+      .main-text
+        %h1 マッチング数 <span>No.1</span> 
+        %h2 ゴルMATCH
+        %h3 ラウンドレッスンを一緒に！
+        %h4 必ず上達するマッチングアプリ
+        .mobile
+          = image_tag "sample_qr.gif", size: "60x60", alt: "QR"
+          .sab-text
+            %h5 スマートフォンから
+            %h5 QRコードを読み込んでください
+            %h5 ログイン後ご利用いただけます
+            %h6 アプリダウンロードはこちら
+            = image_tag "ja_badge_web_generic.png", size: "190x50", alt: "google"
+    .footer-text
+      .footer-copy
+        %h15 全国へ拡大中！『ゴルMATCH』で独立開業しませんか？
+        .footer-copy__text
+          %ul
+            %li 
+              ゴルフ経験者歓迎、指導未経験者も歓迎 
+            %li
+              指導者の経験がない方も積極的にご応募ください 
+            %li 
+              研修が充実しているから、ゴルフ指導が未経験でも大丈夫です！
+            %li 
+              教え方のコツなど基礎からしっかりレクチャーいたしますのでご安心ください。
+            %li
+              ゴルフインストラクター お子さまからシニア層まで、
+            %li
+              幅広い年代のお客様のレベルに合わせてゴルフレッスンを担当して頂きます。
+            %li 
+              ★ 好きなことを仕事にしたい ★ 
+            %li
+              ★ ゴルフの楽しさを伝えたい ★ 
+            %li
+              ★ ゴルフの腕をもっと磨きたい ★ 
+            %li
+              ★ レッスンプロになりたい ★ 
+            %li
+              ★ 好きなゴルフを活かしてダブルワークをしたい ★ 
+            %li
+              ★ 自身の時間を有効活用したい ★ 
+            %li
+              など,1つでも当てはまる方、ご応募お待ちしています！
+            %li
+              ★ゴルフに興味のある歓迎★
+            %li
+              指導者の経験がない方も積極的にご応募ください。
+            %li
+              研修が充実しているから、ゴルフ指導が未経験でも大丈夫です！
+            %li 
+              教え方のコツなど基礎からしっかりレクチャー◎
+            %li
+              ＜楽しさを教えよう！＞
+          %p みんな頼れる「コーチ」に♪成長する姿を実感できる
+          %p やりがいのあるお仕事です！スポーツ好きの方にうってつけ!!
+          .footer-copy__img
+            = image_tag "line_btn.png", size: "230x50", alt: "google"
+    .footer
+      %p Copyright © 2020 ゴルMATCH Inc. All Rights Reserved.
+      .footer-list
+        follow us!
+        = link_to "https://www.facebook.com/", class: "contents__btn" do
+          = icon('fab', 'facebook-square')
+        = link_to "https://twitter.com/", class: "contents__btn" do
+          = icon('fab', 'twitter')
+        = link_to "https://www.instagram.com/", class: "contents__btn" do
+          = icon('fab', 'instagram')
+        = link_to "https://www.instagram.com/", class: "contents__btn" do
+          = icon('fab', 'youtube')
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+
+<div id="page_top"><a href="#"></a></div>

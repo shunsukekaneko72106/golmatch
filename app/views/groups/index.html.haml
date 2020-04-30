@@ -1,0 +1,58 @@
+.header
+  ゴルMATCH
+  .user-name
+    = current_user.name + "さん"
+    .header-list
+      = link_to edit_user_path(current_user) do
+        %h1 アカウント&リスト◁
+.group-header
+  .home-btn
+    = link_to root_path do
+      %i.fas.fa-home
+    .group-edit-btn
+      %h 参加中のグループ一覧
+  .group-text
+    = current_user.name + "さんのレッスンスケジュール一覧"
+.wrapper
+  = render 'messages/side_bar'
+  .plan
+    <iframe src="https://calendar.google.com/calendar/embed?src=s.kaneko.studio%40gmail.com&ctz=Asia%2FTokyo" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    .reservation-form
+      %p 手ぶらでOKレンタル無料！今なら50分3,000円！
+      .home-btn
+        <div class="sam13"><a href="/groups/new">レッスンを予約する<p>新規グループチャットの作成</p></a></div>
+  .right-bar-plan
+    %h20 ゴルMATCH 料金プラン
+    %table
+      %tr 
+        %th 60分✖︎月2回
+        %td 12,000円 
+      %tr
+        %th 60分✖︎月4回
+        %td 15,000円
+      %tr
+        %th 60分✖︎月8回
+        %td 32,000円
+      %tr
+        %th 60分✖︎受け放題
+        %td 32,000円        
+      %tr
+        %th マンツーマン
+        %td 12,000円           
+      %tr
+        %th 入会金
+        %td 20,000円 
+    = image_tag "price_campagin_01.png", size: "425x300", alt: "google" 
+    
+.footer
+  %p Copyright © 2020 ゴルMATCH Inc. All Rights Reserved.
+  .footer-list
+    follow us!
+    = link_to "https://www.facebook.com/", class: "contents__btn" do
+      = icon('fab', 'facebook-square')
+    = link_to "https://twitter.com/", class: "contents__btn" do
+      = icon('fab', 'twitter')
+    = link_to "https://www.instagram.com/", class: "contents__btn" do
+      = icon('fab', 'instagram')
+    = link_to "https://www.instagram.com/", class: "contents__btn" do
+      = icon('fab', 'youtube')

@@ -1,21 +1,47 @@
-#account-page.account-page
-  .account-page__inner.clearfix
-    .account-page__inner--left.account-page__header
-      %h2 Edit Account
-      %h5 アカウントの編集
-      = link_to "ログアウト", '#', class: 'btn'
-      = link_to "トップページに戻る", :back, class: 'btn'
-    .account-page__inner--right.user-form
-      = form_for(current_user) do |f|
-        .field
-          .field-label
-            = f.label :name
-          .field-input
-            = f.text_field :name, autofocus: true
-        .field
-          .field-label
-            = f.label :email
-          .field-input
-            = f.email_field :email
-        .actions
-          = f.submit "Update", class: 'btn'
+.image-users
+  .main-text
+    %h1 マッチング数 <span>No.1</span> 
+    %h2 ゴルMATCH
+    %h3 ラウンドレッスンを一緒に！
+    %h4 必ず上達するマッチングアプリ
+    .mobile
+      = image_tag "sample_qr.gif", size: "60x60", alt: "QR"
+      .sab-text
+        %h5 スマートフォンから
+        %h5 QRコードを読み込んでください
+        %h5 ログイン後ご利用いただけます
+        %h6 アプリダウンロードはこちら
+        = image_tag "ja_badge_web_generic.png", size: "190x50", alt: "google" 
+  #account-page.account-page
+    .account-page__inner.clearfix
+      .account-page__inner--left.account-page__header
+        %h2 Edit Account
+        %h5 アカウントの編集
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'
+        = link_to "トップページに戻る", "/", class: 'btn'
+      .account-page__inner--right.user-form
+        = form_for(current_user) do |f|
+          .field
+            .field-label
+              = f.label :name
+            .field-input
+              = f.text_field :name, autofocus: true
+          .field
+            .field-label
+              = f.label :email
+            .field-input
+              = f.email_field :email
+          .actions
+            = f.submit "更新", class: 'btn'
+.footer
+  %p Copyright © 2020 ゴルMATCH Inc. All Rights Reserved.
+  .footer-list
+    follow us!
+    = link_to "https://www.facebook.com/", class: "contents__btn" do
+      = icon('fab', 'facebook-square')
+    = link_to "https://twitter.com/", class: "contents__btn" do
+      = icon('fab', 'twitter')
+    = link_to "https://www.instagram.com/", class: "contents__btn" do
+      = icon('fab', 'instagram')
+    = link_to "https://www.instagram.com/", class: "contents__btn" do
+      = icon('fab', 'youtube')

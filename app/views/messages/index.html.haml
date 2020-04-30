@@ -1,4 +1,36 @@
+.header
+  ゴルMATCH
+  .user-name
+    = current_user.name + "さん"
+    .header-list
+      = link_to edit_user_path(current_user) do
+        %h1 アカウント&リスト◁
+.group-header
+  .home-btn
+    = link_to root_path do
+      %i.fas.fa-home
+    .group-edit-btn
+      = link_to 'グループを編集', '/groups/new', class: "edit" 
+  .group-text
+    = @group.name
+    .chat-main__group-info-member このチャットのメンバー
+    - @group.users.each do |user|
+      .chat-main__group-info-member
+        = user.name + "さん"
 .wrapper
   = render "side_bar"
   = render "main_chat"
   = render "right_bar"
+
+.footer
+  %p Copyright © 2020 ゴルMATCH Inc. All Rights Reserved.
+  .footer-list
+    follow us!
+    = link_to "https://www.facebook.com/", class: "contents__btn" do
+      = icon('fab', 'facebook-square')
+    = link_to "https://twitter.com/", class: "contents__btn" do
+      = icon('fab', 'twitter')
+    = link_to "https://www.instagram.com/", class: "contents__btn" do
+      = icon('fab', 'instagram')
+    = link_to "https://www.instagram.com/", class: "contents__btn" do
+      = icon('fab', 'youtube')

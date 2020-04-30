@@ -1,44 +1,81 @@
 * {
   box-sizing: border-box;
 }
+$main-font-famly: "Yu Gothic", 游ゴシック体, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 
 
 .side-bar {
   box-sizing: border-box;
   background-color: #E6FFE9;
   width: 300px;
-  height: calc(100vh - 50px);
-  float: left;
-  .group {
+  height: calc(100vh - 115px);
+  padding: 40px 0px ;
+  font-family:$main-font-famly;
+  overflow: auto;
+  // float: left;
+  .group a{
     box-sizing: border-box;
     padding: 20px 0 40px;
-    &__name {
-      color: #222222;
-      font-size: 20px;
-    }
-    &__message {
-      color: #222222;
-      font-size: 15px;
-      margin-top: 5px;
-      padding-left: 20px;
-    }
+    display:block;
+    text-decoration: none;
+      
   }
 }
+.group__name {
+  padding-left: 20px;
+  color: #222222;
+  font-size: 20px;
+}
+.group__message {
+  color: #222222;
+  font-size: 15px;
+  margin-top: 5px;
+  padding-left: 20px;
+}
+// .sam13 a { 
+  // display:block;
+//   width: 800px; /* 横幅 */
+//   background-color:#f70057;;
+//   border:2px solid #00171F;
+//   padding:10px; /* a要素内の余白 */
+//   height: 80px;
+//   font-family:$main-font-famly;
+//   text-align: center;
+//   text-decoration: none;
+//   font-size: 25px;
+//   color: #ffffff;
+//   p {
+//     font-size: 15px;
+//   }
 
-
+//   }
+  
+   /* 以下マウスを載せたときのスタイル */
+.group a:hover { 
+  background-color: #FAFAFA;
+  color:#222222; 
+  transition: all 0.5s ease 0s;
+}
+.group a:active { 
+  color: #ff8000; 
+}
 .messages {
   background-color: #FAFAFA;
   box-sizing: border-box;
-  height: calc(100vh - 100px - 50px);
-  // overflow: scroll;
-  width: calc(100% - 300px);
-  display: flex;
+  height: calc(100vh - 110px - 100px);
+  overflow: scroll;
+  width: calc(100% - 300px - 500px);
+  font-family:$main-font-famly;
+  // display: flex;
   .message {
     padding: 46px 40px 0;
+    border-bottom-style: groove;
+    border-right-style: groove;
     .upper-message {
       display: flex;
+
       &__user-name {
-        color: #434a54;
+        color: #000000;
         font-size: 16px;
         font-weight: bold;
       }
@@ -46,6 +83,7 @@
         color: #999;
         font-size: 12px;
         padding-left: 10px;
+        
       }
     }
     .lower-message {
@@ -57,54 +95,72 @@
       }
     }
   }
-  .right-bar {
+  .form {
+    position: absolute;
+    bottom: 20px;
+    // background-color: #DDDDDD;
     box-sizing: border-box;
-    background-color: #8FBC8F;
-    width: 350px;
-    height:calc(100vh - 50px);
-    float: right;
-    display: flex;
-    justify-content: flex-end;
-    margin:0 0 0 auto;
-    padding: 30px 30px;
+    height: 100px;
+    padding: 20px 50px 20px 40px;
+    width: calc(100% - 300px - 500px);
+    border-top-style: groove;
+    border-top-color: #8FBC8F;
+    // float: left;
+  
+    &__message {
+      border: none;
+      float: left;
+      height: 50px;
+      width: calc(100% - 180px);
+    }
+    &__mask {
+      background-color: #ffff;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        margin-left: 40px;
+        // line-height: 50px;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: #007700;
+      border: none;
+      color: #FAFAFA;
+      float: right;
+      font-size: 16px;
+      margin-left: 15px;
+      padding: 0 30px;
+    }
   }
-}  
+}
 
-.form {
-  background-color: #DDDDDD;
+// .header-list {
+//   font-size: 20px;
+//   line-height: 40px;
+//   float: right;
+//   color: #ffffff;
+  
+// }
+
+.right-bar {
   box-sizing: border-box;
-  height: 90px;
-  padding: 20px 50px 20px 40px;
-  width: calc(100% - 300px - 350px);
-  float: left;
-
-  &__message {
-    border: none;
-    float: left;
-    height: 50px;
-    width: calc(100% - 180px);
-  }
-  &__mask {
-    background-color: #ffff;
-    float: left;
-    height: 50px;
-    padding-right: 10px;
-    &__image {
-      font-size: 20px;
-      line-height: 50px;
-    }
-    .hidden {
-      display: none;
+  background-color: #8FBC8F;
+  width: 500px;
+  height: calc(100vh - 115px);
+  padding: 40px 40px ;
+  .teacher-plf {
+    margin-left: 50px;
+    h1 {
+      font-size: 18px;
+      font-weight: bold;
     }
   }
-  &__submit {
-    background-color: #007700;
-    border: none;
-    color: #FAFAFA;
-    float: right;
-    font-size: 16px;
-    height: 50px;
-    margin-left: 15px;
-    padding: 0 30px;
+  .place-tag {
+    margin-left: 50px;
   }
 }

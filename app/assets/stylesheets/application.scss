@@ -1,9 +1,15 @@
 @import "reset";
+@import "index";
+@import "config/colors";
 @import "modules/messages";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import "modules/user";
+@import "modules/flash";
+@import "modules/group";
+@import "modules/coaches";
 
+$main-font-famly: "Yu Gothic", 游ゴシック体, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 
 .header {
   height: 45px;
@@ -26,30 +32,50 @@
       float: right;
       padding-left: 30px;
       color: #ffffff;
-  }
+    }
+    .header-list {
+      float: right;
+      margin-left: 40px;
+      a {
+        text-decoration: none;
+        h1 {
+          color: #ffffff;
+          font-size: 15px;
+          }
+      }  
+    }
   }
 }
-
-.footer {
-  background-color: #003300;
-  width: 100%;
-  height: 20px;
-  color: #ffffff;
-  position: absolute;/*←絶対位置*/
-  bottom: 0; /*下に固定*/
-  display: flex;
-   p {
-     padding-left: 100px;
-   }
-    .footer-list {
-      display: flex;
-      justify-content: flex-end;
-      padding-left: 900px;
-      .contents__btn {
-        float: right;
-        padding-left: 30px;
-        color: #ffffff;
+.group-header {
+  border: 1px solid #003300;
+  height: 50px;
+  
+  .home-btn {
+    width: 300px;
+    float: left;
+    background-color: #FAFAFA;
+    text-align: center;
+    i {
+    color: #003300;
+    size: 20px;
     }
+  }  
+    .group-edit-btn {
+      
+        .edit {
+        padding-left: 20px;
+        font-size: 15px;
+        text-decoration: none;
+        color :#003300;
+        }
+      
+  } 
+  .group-text {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+    margin-left: 350px;
+
   }
 }
 
