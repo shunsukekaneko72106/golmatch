@@ -16,4 +16,17 @@
     %h1 新規チャットグループを作成
     = render partial: 'form', locals: { group: @group }
     .account-page__inner--left.account-page__header
-      = link_to "メッセージ画面に戻る", root_path, class: 'btn'
+      .grouphome-btn 
+        = link_to "メッセージ画面に戻る", root_path, class: 'home-btn'
+.footer
+  %p Copyright © 2020 ゴルMATCH Inc. All Rights Reserved.
+  .footer-list
+    follow us!
+    = link_to "https://www.facebook.com/", class: "contents__btn" do
+      = icon('fab', 'facebook-square')
+    = link_to "https://twitter.com/", class: "contents__btn" do
+      = icon('fab', 'twitter')
+    = link_to "https://www.instagram.com/", class: "contents__btn" do
+      = icon('fab', 'instagram')
+    = link_to "https://www.instagram.com/", class: "contents__btn" do
+      = icon('fab', 'youtube')

@@ -104,6 +104,7 @@
         font-size: 14px;
         text-decoration: none;
         padding-bottom: 20px;
+        
       }
     }
   
@@ -135,6 +136,7 @@
       text-align: center;
       border: none;
       border-radius: 2px;
+      
     }
   
     input[type='submit'] {
@@ -142,6 +144,7 @@
       margin-top: 20px;
       color: #fff;
       background-color: #007700;
+      
     }
     .field-label {
       .field_with_errors {
@@ -807,7 +810,7 @@
         margin-top: 60px ;
         margin-left: 300px;
         padding: 60px;
-        // background-color: #fff;
+        background: rgba(255,255,255,0.75);
         border: 1px solid #003300;
         // border-radius: 5px;
         .account-page__inner--left, .account-page__inner--right {
@@ -844,6 +847,7 @@
           color: #fff;
           background-color: #003300;
           font-size: 14px;
+          text-decoration: none;
         }
       }
     
