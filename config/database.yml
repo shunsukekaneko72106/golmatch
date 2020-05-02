@@ -52,5 +52,5 @@ production:
   <<: *default
   database: golmatch_production
   username: root
-  password: <%= ENV['GOLMATCH_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
