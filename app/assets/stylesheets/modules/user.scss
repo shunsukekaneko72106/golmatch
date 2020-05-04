@@ -3,7 +3,7 @@
   display: flex;
   height: 800px;
   background-position: center;
-  background-image: url(golf-2217600_1920.jpg);
+  background-image: image_url("golf-2217600_1920.jpg");
   background-size: cover;
   .main-text {
     // padding-top: 200px;
@@ -212,7 +212,7 @@
 
 .body-top {
   width: 100%;
-  background: url('b-ground.gif');
+  background: image_url("b-ground.gif");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -344,7 +344,7 @@
     .body-copy {
       height: 500px;
       background-position: center;
-      background-image: url(body_sample.jpg);
+      background-image: image_url("body_sample.jpg");
       background-size: cover;
       padding-top: 40px;
       padding-bottom: 40px;
@@ -492,7 +492,7 @@
       width: 100%;
       background-color: #ffffff;
       background-position: center;
-      background-image: url(golf.jpg);
+      background-image: image_url("golf.jpg");
       background-size: 100%;
       background-attachment: fixed;
       
@@ -648,7 +648,7 @@
       display: flex;
       height: 680px;
       background-position: center;
-      background-image: url(golf-2217600_1920.jpg);
+      background-image: image_url("golf-2217600_1920.jpg");
       background-size: cover;
       background-attachment: fixed;
       // flex-direction: column;
@@ -748,7 +748,7 @@
     display: flex;
     height: 98vh;
     background-position: center;
-    background-image: url(golf-2217600_1920.jpg);
+    background-image: image_url("golf-2217600_1920.jpg");
     background-size: cover;
 
     // flex-direction: column;

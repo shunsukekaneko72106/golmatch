@@ -1,28 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 概要
+多くのゴルフ場がレッスンプロの人数や料金まで課金している。
+例えば4人1組で回っている時に1人のレッスンプロが付けば、4人同時にレッスンを受けることができるので、レッスン料をシェアできてお得だ。回る時間も、レッスンプロはプレイしないので遅延しない。だから「4+1」で回らせて欲しいのに、ゴルフ場の多くは頑なにそれを拒む。
+レッスンプロが固定されていて、コミュケーション能力が低い人もいる。
+中国人レッスンプロなどインバウンド需要を取り込むと競技人口が増える。
+仕組み的には、ゴルフ場とレッスンプロとが提携し、レッスンプロはサイトに登録。決められた日時にゴルフ場へ行けるようにマッチング。これであればアマチュアも依頼しやすい。
 
-Things you may want to cover:
+# 事業リスク
+・天災、自然災害のリスク
+・会員の高齢化
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+# 展望
+ゴルフ場業界はバブル崩壊と共に苦しい状態が続いていたが、国内外の投資ファンドや企業の進出を皮切りにM&Aを通じて徐々に回復している。
+インバウンド需要をうまく取り込むことで、海外からの新たな顧客獲得や若者を中心にゴルフ人口を増やすこと。
+大型のゴルフ場のM&Aが一通り終わった今、今後は中小のゴルフ場を中心とした業界再編が始まる。
 
 
 
