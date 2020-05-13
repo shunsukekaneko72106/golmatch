@@ -25,13 +25,19 @@
           プロフィール画像
           %span{class: "require"} 必須
         .new-wrapper__main__text
-          最大3枚までアップロードできます
+        
         .new-wrapper__main__image-field
-          %i{class: "fas fa-camera"}
-          .new-wrapper__main__image-field__text
-            ドラッグアンドドロップ
-            %br
-            またはクリックしてファイルをアップロード
+          = f.label :image, class: 'input-box__text' do
+            #img_field{:onclick => "$('#file').click()"}
+              -# - if @coach.image.url.present?
+              -#   = image_tag(@coach.image.url)
+              -# - else
+              -#   %i.fas.fa-image
+              -#   %i.fas.fa-file-upload.add
+              = icon('fas', 'image', class: 'input-box__text__image')
+            = f.file_field :image, class: 'input-box__text__file', id: "file", style: "display:none;"
+            .new-wrapper__main__image-field__text
+              クリックしてファイルをアップロード
       .new-wrapper__main
         .new-wrapper__main__title
           現在活動されているお名前
@@ -50,11 +56,11 @@
         = f.select :career, [["選択してください",""],"PGAティーチングプロA級","JGTO認定コーチ","その他"], {}, class: "new-wrapper__main__input-select"
         .new-wrapper__main__title.spacing
           経歴
-          %span{class: "any"} 任意
+          %span{class: "require"} 任意
         = f.text_field :comment, {class: "new-wrapper__main__input-text", placeholder: "例）日本女子オープン選手権競技出場 など"}
         .new-wrapper__main__title.spacing
           対応ゴルフ場
-          %span{class: "require"} 必須
+          %span{class: "any"} 任意
         = f.select :course, [["選択してください",""],"ノーザンカントリークラブ錦ヶ原ゴルフ場","上里ゴルフ場","アコーディア・ゴルフ習志野カントリークラブ","かずさカントリークラブ","ABCいすみゴルフコース"], {}, class: "new-wrapper__main__input-select"
       .new-wrapper__main
         .new-wrapper__main__subtitle
@@ -62,7 +68,20 @@
         .new-wrapper__main__title
           特徴
           %span{class: "require"} 必須
-        = f.select :specialty, [["選択してください",""],"個人レッスン","ラウンドレッスン","指導者育成","メンタル改善"], {}, class: "new-wrapper__main__input-select"
+          -# = f.label :speciality
+          = f.collection_check_boxes(:speciality_ids, Speciality.all, :id, :name) 
+          -#   <%= specialty.label do %>
+          -#     <%= specialty.check_box %>
+          -#     <%= specialty.text %>
+          -#   <% end %>
+          -# <% end %>
+          -# = f.label :specialty, 'カテゴリ' 
+          -#   = f.collection_check_boxes(:specialities_ids, Specialty.all, :id, :name) do |s| 
+          -#     = s.label do
+          -#       = s.check_box 
+          -#       = s.text 
+
+        -# = f.select :specialty, [["選択してください",""],"個人レッスン","ラウンドレッスン","指導者育成","メンタル改善"], {}, class: "new-wrapper__main__input-select"
         .new-wrapper__main__title.spacing
           活動されている地域
           %span{class: "require"} 必須

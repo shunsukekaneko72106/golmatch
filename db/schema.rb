@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200423041657) do
+ActiveRecord::Schema.define(version: 20200508023748) do
 
   create_table "coaches", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                     null: false
@@ -18,9 +18,8 @@ ActiveRecord::Schema.define(version: 20200423041657) do
     t.text     "career",     limit: 65535, null: false
     t.string   "image",                    null: false
     t.integer  "birthday",                 null: false
-    t.integer  "course",                   null: false
+    t.integer  "course"
     t.text     "comment",    limit: 65535, null: false
-    t.string   "specialty",                null: false
     t.string   "holiday",                  null: false
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
@@ -53,6 +52,21 @@ ActiveRecord::Schema.define(version: 20200423041657) do
     t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
   end
 
+  create_table "specialities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "speciality_coaches", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer  "coach_id"
+    t.integer  "speciality_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["coach_id"], name: "index_speciality_coaches_on_coach_id", using: :btree
+    t.index ["speciality_id"], name: "index_speciality_coaches_on_speciality_id", using: :btree
+  end
+
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name",                                null: false
     t.string   "email",                  default: "", null: false
@@ -71,4 +85,6 @@ ActiveRecord::Schema.define(version: 20200423041657) do
   add_foreign_key "group_users", "users"
   add_foreign_key "messages", "groups"
   add_foreign_key "messages", "users"
+  add_foreign_key "speciality_coaches", "coaches"
+  add_foreign_key "speciality_coaches", "specialities"
 end
