@@ -180,7 +180,7 @@ li {
 
 .plan {
   padding-top :30px;
-  padding-left: 50px;
+  // padding-left: 50px;
 }
 
 .reservation-form {
@@ -196,7 +196,7 @@ li {
 .right-bar-plan {
   box-sizing: border-box;
   background-color: #8FBC8F;
-  width: 500px;
+  width: 30%;
   height: calc(100vh - 115px);
   padding: 40px 40px ;
   margin:0 0 0 auto;
@@ -306,3 +306,4 @@ table td{
     bottom: 20px;
   }
 }
+
