@@ -5,6 +5,7 @@
   background-position: center;
   background-image: image_url("golf-2217600_1920.jpg");
   background-size: cover;
+  width: 100%;
   .main-text {
     // padding-top: 200px;
     // padding-left: 80px;
@@ -403,6 +404,7 @@
       padding-bottom: 40px;
       width: 100%;
       background-color: #F3FFD8;
+
       .safe-copy__text {
           text-align: center;
           padding-top: 70px;
@@ -440,7 +442,7 @@
       } 
       .safe-card-top {
         margin-top: 50px;
-        margin-left: 650px;
+        width: 100%;
         ul {
           
           text-align: center;
@@ -450,7 +452,7 @@
             padding: 40px 10px;
             align-items: center;
             text-align: center;
-            margin-left: 10px;
+            margin: 0 auto;
             border-radius: 5px;
             margin-bottom: 50px;
             box-shadow:1px 1px 1px 1px rgba(0, 0, 0, 0.2);

@@ -18,10 +18,79 @@
     .sction-card
       .card__content
         %p 外部サービス側にゴルMATCHのご利用状況が投稿されることは一切ありません。
-      %table.form-table
-        %tbody
-          %tr
-            %th.form-table__head 氏名
-            %span.label-necessary 必修
-            %th.form-table__body
-            
+  = form_for @coach do |f|
+    .new-wrapper
+      .new-wrapper__main
+        .new-wrapper__main__title
+          プロフィール画像
+          %span{class: "require"} 必須
+        .new-wrapper__main__text
+        
+        .new-wrapper__main__image-field
+          = f.label :image, class: 'input-box__text' do
+            #img_field{:onclick => "$('#file').click()"}
+              -# - if @coach.image.url.present?
+              -#   = image_tag(@coach.image.url)
+              -# - else
+              -#   %i.fas.fa-image
+              -#   %i.fas.fa-file-upload.add
+              = icon('fas', 'image', class: 'input-box__text__image')
+            = f.file_field :image, class: 'input-box__text__file', id: "file", style: "display:none;"
+            .new-wrapper__main__image-field__text
+              クリックしてファイルをアップロード
+      .new-wrapper__main
+        .new-wrapper__main__title
+          現在活動されているお名前
+          %span{class: "require"} 必須
+        = f.text_field :name, {class: "new-wrapper__main__input-text", placeholder: "〇〇プロ"}
+        .new-wrapper__main__title.spacing
+          私の強み
+          %span{class: "require"} 必須
+        = f.text_area :profile, {class: "new-wrapper__main__input-textarea", placeholder: "40文字以内でお願い致します"}
+      .new-wrapper__main
+        .new-wrapper__main__subtitle
+          現在までのご経歴など
+        .new-wrapper__main__title
+          実績
+          %span{class: "require"} 必須
+        = f.select :career, [["選択してください",""],"PGAティーチングプロA級","JGTO認定コーチ","その他"], {}, class: "new-wrapper__main__input-select"
+        .new-wrapper__main__title.spacing
+          経歴
+          %span{class: "require"} 任意
+        = f.text_field :comment, {class: "new-wrapper__main__input-text", placeholder: "例）日本女子オープン選手権競技出場 など"}
+        .new-wrapper__main__title.spacing
+          対応ゴルフ場
+          %span{class: "any"} 任意
+        = f.select :course, [["選択してください",""],"ノーザンカントリークラブ錦ヶ原ゴルフ場","上里ゴルフ場","アコーディア・ゴルフ習志野カントリークラブ","かずさカントリークラブ","ABCいすみゴルフコース"], {}, class: "new-wrapper__main__input-select"
+      .new-wrapper__main
+        .new-wrapper__main__subtitle
+          専門分野
+        .new-wrapper__main__title
+          特徴
+          %span{class: "require"} 必須
+          -# = f.label :speciality
+          = f.collection_check_boxes(:speciality_ids, Speciality.all, :id, :name) 
+          -#   <%= specialty.label do %>
+          -#     <%= specialty.check_box %>
+          -#     <%= specialty.text %>
+          -#   <% end %>
+          -# <% end %>
+          -# = f.label :specialty, 'カテゴリ' 
+          -#   = f.collection_check_boxes(:specialities_ids, Specialty.all, :id, :name) do |s| 
+          -#     = s.label do
+          -#       = s.check_box 
+          -#       = s.text 
+
+        -# = f.select :specialty, [["選択してください",""],"個人レッスン","ラウンドレッスン","指導者育成","メンタル改善"], {}, class: "new-wrapper__main__input-select"
+        .new-wrapper__main__title.spacing
+          活動されている地域
+          %span{class: "require"} 必須
+        = f.select :course, [["選択してください",""],"北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県","茨城県","栃木県","群馬県","埼玉県","千葉県","東京都","神奈川県","新潟県","富山県","石川県","福井県","山梨県","長野県","岐阜県","静岡県","愛知県","三重県","滋賀県","京都府","大阪府","兵庫県","奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県","徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県","熊本県","大分県","宮崎県","鹿児島県","沖縄県"], {}, class: "new-wrapper__main__input-select"
+        .new-wrapper__main__title.spacing
+          希望する定休日
+          %span{class: "require"} 必須
+        = f.select :holiday, [["選択してください",""],"土・日","月・火","水・木","金・土","相談に応じて幅広く対応"], {}, class: "new-wrapper__main__input-select"
+      .new-wrapper__main
+        = f.submit "面談を希望する", {class:"new-wrapper__main__submit"}
+        .new-wrapper__main__caution
+          上記の会員規約と個人情報の取り扱いに同意した上で面談を希望するをクリックしてください。
