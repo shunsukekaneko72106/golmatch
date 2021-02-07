@@ -1,6 +1,8 @@
 ![18208e6395d8f2ceffe4e89be83526eb](https://user-images.githubusercontent.com/61620829/107138470-ed587280-6957-11eb-8ae3-3bf145c887d2.gif)
 
+![1dfd1cd340e852539f6ebba20c0157d1](https://user-images.githubusercontent.com/61620829/107139689-82f80000-6960-11eb-81e6-c30848c1f6da.gif)
 
+![4b06078e4342e6473e1efa7ae11eee8e](https://user-images.githubusercontent.com/61620829/107139754-f568e000-6960-11eb-90e9-8bf2dc310fc5.gif)
 # 概要
 多くのゴルフ場がレッスンプロの人数や料金まで課金している。
 例えば4人1組で回っている時に1人のレッスンプロが付けば、4人同時にレッスンを受けることができるので、レッスン料をシェアできてお得だ。回る時間も、レッスンプロはプレイしないので遅延しない。だから「4+1」で回らせて欲しいのに、ゴルフ場の多くは頑なにそれを拒む。
